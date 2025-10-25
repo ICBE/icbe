@@ -1,0 +1,9 @@
+{
+  "name": "icbe",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*"
+    ]
+  }
+}
