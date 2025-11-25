@@ -5,7 +5,10 @@
     "packages": [
       "apps/*",
       "packages/*"
-    ]
+    ],
+    "catalog": {
+      "wrangler": "^4.50.0"
+    }
   },
   "scripts": {
     "format": "bunx biome format --write"

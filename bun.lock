@@ -31,8 +31,7 @@
       },
       "devDependencies": {
         "tw-animate-css": "^1.4.0",
-        "typescript": "^5.9.3",
-        "wrangler": "^4.45.3",
+        "wrangler": "catalog:",
       },
     },
     "packages/colorproven-userscript": {
@@ -40,13 +39,16 @@
       "devDependencies": {
         "@infinite-craft/dom-types": "^0.0.1",
         "@violentmonkey/types": "^0.3.1",
-        "typescript": "^5.9.3",
         "usts": "^0.0.3",
+        "wrangler": "catalog:",
       },
     },
   },
   "overrides": {
     "esbuild": "^0.25.4",
+  },
+  "catalog": {
+    "wrangler": "^4.50.0",
   },
   "packages": {
     "@astrojs/compiler": ["@astrojs/compiler@2.13.0", "", {}, "sha512-mqVORhUJViA28fwHYaWmsXSzLO9osbdZ5ImUfxBarqsYdMlPbqAqGJCxsNzvppp1BEzc1mJNjOVvQqeDN8Vspw=="],

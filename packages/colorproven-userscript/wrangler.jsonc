@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
 
-  "name": "history",
+  "name": "colorproven-userscript",
   "compatibility_date": "2025-11-18",
 
   "assets": {
