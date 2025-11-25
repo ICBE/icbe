@@ -406,8 +406,8 @@ export default function Component() {
             {!isChartMounted
               ? "Loading chart..." // Show loading message during initial delay
               : chartData.length === 0
-              ? "No data in selected time range."
-              : "No lines selected. Use the checkboxes above to show data."}
+                ? "No data in selected time range."
+                : "No lines selected. Use the checkboxes above to show data."}
           </p>
         </div>
       )}

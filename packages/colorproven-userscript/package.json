@@ -1,0 +1,14 @@
+{
+  "name": "colorproven-userscript",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "bunx usts build"
+  },
+  "devDependencies": {
+    "@infinite-craft/dom-types": "^0.0.1",
+    "@violentmonkey/types": "^0.3.1",
+    "typescript": "^5.9.3",
+    "usts": "^0.0.2"
+  }
+}

@@ -3,7 +3,18 @@
   "private": true,
   "workspaces": {
     "packages": [
-      "apps/*"
+      "apps/*",
+      "packages/*"
     ]
+  },
+  "scripts": {
+    "format": "bunx biome format --write"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.7",
+    "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "esbuild": "^0.25.4"
   }
 }
