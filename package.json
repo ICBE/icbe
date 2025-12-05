@@ -7,7 +7,7 @@
       "packages/*"
     ],
     "catalog": {
-      "wrangler": "^4.51.0"
+      "wrangler": "^4.53.0"
     }
   },
   "scripts": {
