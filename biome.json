@@ -26,7 +26,7 @@
   "javascript": {
     "formatter": {
       "quoteStyle": "double",
-      "trailingCommas": "es5"
+      "trailingCommas": "all"
     }
   },
   "assist": {

@@ -59,7 +59,7 @@ export default function Component() {
     x1: number,
     y1: number | null,
     x2: number,
-    y2: number | null
+    y2: number | null,
   ): number | null => {
     if (y1 === null || y2 === null) return null; // If any value is null, cannot interpolate meaningfully
     if (x1 === x2) return y1; // Avoid division by zero if timestamps are identical
@@ -81,11 +81,11 @@ export default function Component() {
 
     // Find the point immediately before the selected range start
     const pointBeforeStart = validData.findLast(
-      (item) => item.timestamp < timeRange[0]
+      (item) => item.timestamp < timeRange[0],
     );
     // Find the first point within or after the selected range start
     const firstPointInOrAfterRange = validData.find(
-      (item) => item.timestamp >= timeRange[0]
+      (item) => item.timestamp >= timeRange[0],
     );
 
     // Add interpolated start point if necessary
@@ -101,14 +101,14 @@ export default function Component() {
           pointBeforeStart.timestamp,
           pointBeforeStart.proven,
           firstPointInOrAfterRange.timestamp,
-          firstPointInOrAfterRange.proven
+          firstPointInOrAfterRange.proven,
         ),
         disproven: interpolateValue(
           timeRange[0],
           pointBeforeStart.timestamp,
           pointBeforeStart.disproven,
           firstPointInOrAfterRange.timestamp,
-          firstPointInOrAfterRange.disproven
+          firstPointInOrAfterRange.disproven,
         ),
       });
     } else if (
@@ -128,11 +128,11 @@ export default function Component() {
 
     // Find the last point within or before the selected range end
     const lastPointInOrBeforeRange = validData.findLast(
-      (item) => item.timestamp <= timeRange[1]
+      (item) => item.timestamp <= timeRange[1],
     );
     // Find the point immediately after the selected range end
     const pointAfterEnd = validData.find(
-      (item) => item.timestamp > timeRange[1]
+      (item) => item.timestamp > timeRange[1],
     );
 
     // Add interpolated end point if necessary
@@ -148,14 +148,14 @@ export default function Component() {
           lastPointInOrBeforeRange.timestamp,
           lastPointInOrBeforeRange.proven,
           pointAfterEnd.timestamp,
-          pointAfterEnd.proven
+          pointAfterEnd.proven,
         ),
         disproven: interpolateValue(
           timeRange[1],
           lastPointInOrBeforeRange.timestamp,
           lastPointInOrBeforeRange.disproven,
           pointAfterEnd.timestamp,
-          pointAfterEnd.disproven
+          pointAfterEnd.disproven,
         ),
       });
     } else if (

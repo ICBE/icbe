@@ -87,7 +87,7 @@ function handleNode(node: Node): void {
     node.querySelector(".item")
   ) {
     const item = Array.from(node.querySelectorAll(".item")).find(
-      (x) => x === node.children[0]
+      (x) => x === node.children[0],
     );
     if (!item) return;
     handleItemColor(item);
@@ -97,7 +97,7 @@ function handleNode(node: Node): void {
 function updateButtonText(
   button: HTMLButtonElement,
   texts: readonly string[],
-  interval: number
+  interval: number,
 ): Promise<() => void> {
   let index = 0;
   return new Promise((resolve) => {
@@ -121,7 +121,7 @@ function setupButtonForUpdatingData(): void {
     const stopAnimation = await updateButtonText(
       buttonForUpdatingData,
       ["Updating..", "Updating..."],
-      300
+      300,
     );
 
     let success = false;
@@ -161,7 +161,7 @@ function setupButtonForUpdatingData(): void {
 
 async function getLatestUserscriptMeta() {
   const response = await fetch(
-    "https://userscripts.rman.dev/infinite-craft/color-proven/meta.json"
+    "https://userscripts.rman.dev/infinite-craft/color-proven/meta.json",
   );
   const data: UserscriptMeta = await response.json();
   return data;
