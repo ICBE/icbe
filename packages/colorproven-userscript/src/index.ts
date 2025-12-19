@@ -46,7 +46,7 @@ function storeColorData(proven: string[], disproven: string[]): void {
 function isDeadNumber(text: string): boolean {
   if (!/^\d+$/.test(text)) return false;
   const num = Number(text);
-  if (isNaN(num)) return false;
+  if (Number.isNaN(num)) return false;
   return num >= 1_000_000;
 }
 
@@ -59,17 +59,17 @@ function handleDivColor(div: ICInstanceDivElement | ICItemDivElement): void {
     div.style.color = colors.disproven;
   } else if (isDeadNumber(text)) {
     div.style.color = colors.disproven;
-  } else if (elem && elem.color) {
+  } else if (elem?.color) {
     div.style.color = elem.color;
   }
 }
 
 function handleInstanceColor(instance: ICInstanceDivElement): void {
-  return handleDivColor(instance);
+  handleDivColor(instance);
 }
 
 function handleItemColor(item: ICItemDivElement): void {
-  return handleDivColor(item);
+  handleDivColor(item);
 }
 
 function handleNode(node: Node): void {
