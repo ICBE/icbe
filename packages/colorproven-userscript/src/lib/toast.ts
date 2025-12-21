@@ -53,7 +53,7 @@ function showToast(message: string | string[]) {
   closeBtn.style.alignSelf = "flex-end";
   closeBtn.addEventListener("click", () => {
     toast.remove();
-    if (!container!.childElementCount) container!.remove();
+    if (!container.childElementCount) container.remove();
   });
 
   toast.appendChild(closeBtn);
