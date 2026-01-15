@@ -20,6 +20,15 @@
       "recommended": true,
       "style": {
         "noNonNullAssertion": "warn"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "warn"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "warn"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "warn"
       }
     }
   },
