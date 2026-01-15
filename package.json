@@ -13,8 +13,8 @@
   "scripts": {
     "lint": "biome lint",
     "format": "biome format --write",
-    "build:userscript": "bun run -F './packages/colorproven-userscript' --elide-lines 0 build",
-    "build:apps": "bun run -F './apps/*' --elide-lines 0 build"
+    "build:userscript": "bun run -F './packages/colorproven-userscript' build",
+    "build:apps": "bun run -F './apps/*' build"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.11",
