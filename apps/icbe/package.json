@@ -8,7 +8,7 @@
     "dev": "astro dev"
   },
   "dependencies": {
-    "astro": "6.0.0-beta.9"
+    "astro": "catalog:"
   },
   "devDependencies": {
     "wrangler": "catalog:"
