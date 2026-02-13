@@ -12,7 +12,7 @@
   },
   "scripts": {
     "lint": "biome lint",
-    "format": "biome format --write",
+    "format": "biome check --write --linter-enabled=false",
     "build:userscript": "bun run --cwd ./packages/colorproven-userscript build",
     "build:apps": "bun run -F './apps/*' build"
   },

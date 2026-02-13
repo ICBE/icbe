@@ -1,17 +1,16 @@
-import { useState, useMemo, useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
-
-import { ChartContainer } from "./ui/chart";
-import { Slider } from "./ui/slider";
 import { Button } from "./ui/button";
+import { ChartContainer } from "./ui/chart";
 import { Checkbox } from "./ui/checkbox";
+import { Slider } from "./ui/slider";
 
 // import { ThemeToggle } from "./components/theme-toggle";
 const ThemeToggle = () => null;
 
-import { history } from "~/lib/history";
 import { getYAxisTickInterval } from "~/lib/chart-settings";
+import { history } from "~/lib/history";
 import { TIME_RANGE_PRESETS } from "~/lib/time-range-presets";
 
 interface DataPoint {
