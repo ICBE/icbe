@@ -1,23 +1,9 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.4.2/schema.json",
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
-  "files": {
-    "ignoreUnknown": false,
-    "includes": ["**/*.ts", "**/*.tsx", "**/*.astro"]
-  },
-  "formatter": {
-    "enabled": true,
-    "indentStyle": "space",
-    "lineEnding": "lf"
-  },
+  "$schema": "https://biomejs.dev/schemas/2.4.8/schema.json",
+  "extends": ["@gameroman/config/biome"],
+  "css": { "parser": { "tailwindDirectives": true } },
   "linter": {
-    "enabled": true,
     "rules": {
-      "recommended": true,
       "style": {
         "noNonNullAssertion": "warn"
       },
@@ -31,15 +17,5 @@
         "noDangerouslySetInnerHtml": "warn"
       }
     }
-  },
-  "assist": {
-    "enabled": true,
-    "actions": {
-      "source": { "organizeImports": "on" }
-    }
-  },
-  "html": {
-    "formatter": { "enabled": false, "selfCloseVoidElements": "always" },
-    "experimentalFullSupportEnabled": true
   }
 }

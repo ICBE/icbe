@@ -7,19 +7,20 @@
       "packages/*"
     ],
     "catalog": {
-      "astro": "^6.0.0-beta.13",
-      "wrangler": "^4.66.0"
+      "astro": "^6.0.8",
+      "wrangler": "^4.76.0"
     }
   },
   "scripts": {
-    "lint": "biome lint",
+    "lint": "biome check",
     "format": "biome check --write --linter-enabled=false",
     "build:userscript": "bun run --cwd ./packages/colorproven-userscript build",
     "build:apps": "bun run -F './apps/*' build"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.2",
-    "typescript": "^5.9.3"
+    "@biomejs/biome": "2.4.8",
+    "@gameroman/config": "^0.0.4",
+    "typescript": "^6.0.2"
   },
   "overrides": {
     "esbuild": "^0.27.3"

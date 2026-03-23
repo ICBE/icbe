@@ -1,19 +1,10 @@
 import type { IC_DOM } from "@infinite-craft/dom-types";
 
-import { showToast } from "./lib/toast";
-
 type ICInstanceDivElement = IC_DOM.InstanceDivElement;
 type ICItemDivElement = IC_DOM.ItemDivElement;
 
 type ElementsMap = Record<string, { color: string }>;
 type ElementsData = { proven: string[]; disproven: string[] };
-type UserscriptMetaHeaders = {
-  name: string;
-  match: string;
-  version: string;
-  description: string;
-};
-type UserscriptMeta = { headers: UserscriptMetaHeaders };
 
 const colors = {
   /** Color for Proven Elements */
@@ -23,8 +14,6 @@ const colors = {
 } as const;
 
 const elementsMap: ElementsMap = {};
-
-const __VERSION__ = GM.info.script.version;
 
 async function loadData(why: "load" | "update"): Promise<ElementsData> {
   const api_url = "https://icbe.rman.dev/api";
@@ -102,7 +91,7 @@ function updateButtonText(
   let index = 0;
   return new Promise((resolve) => {
     const intervalId = window.setInterval(() => {
-      button.textContent = texts[index]!;
+      button.textContent = texts[index] ?? null;
       index = (index + 1) % texts.length;
     }, interval);
     resolve(() => {
@@ -159,38 +148,7 @@ function setupButtonForUpdatingData(): void {
   sideControls.prepend(buttonForUpdatingData);
 }
 
-async function getLatestUserscriptMeta() {
-  const response = await fetch(
-    "https://userscripts.rman.dev/infinite-craft/color-proven/meta.json",
-  );
-  const data: UserscriptMeta = await response.json();
-  return data;
-}
-
-async function getLatestUserscriptVersion() {
-  const meta = await getLatestUserscriptMeta();
-  return meta.headers.version;
-}
-
-async function checkUserscriptVersion() {
-  const latestVersion = await getLatestUserscriptVersion();
-  console.log({ __VERSION__, latestVersion });
-  if (__VERSION__ === latestVersion) {
-    console.log("Userscript is up to date");
-    return;
-  }
-
-  showToast([
-    "You are using an outdated version of the color-proven userscript.\n",
-    "Please update to the latest version.\n",
-    `Current version: ${__VERSION__}`,
-    `Latest version: ${latestVersion}\n`,
-  ]);
-}
-
 async function init(): Promise<void> {
-  checkUserscriptVersion();
-
   const { proven, disproven } = await loadData("load");
   storeColorData(proven, disproven);
 
