@@ -55,7 +55,7 @@ export async function getProvenToSave(
   const combined = mergeProvenData(existing, elements);
 
   const { metadata, history } = getUpdatedMetaInfo(oldHistory, {
-    type: "disproven",
+    type: "proven",
     count: combined.length,
   });
 
