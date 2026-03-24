@@ -13,9 +13,9 @@ import {
 } from "./gitlab";
 import { mergeProvenData } from "./merge-data";
 
-function getUpdatedMetaInfo(
+function getUpdatedMetaInfo<T extends "proven" | "disproven">(
   oldHistory: ElementsHistory,
-  elements: { type: "proven" | "disproven"; count: number },
+  elements: { type: T; count: number },
 ): { metadata: Metadata; history: ElementsHistory } {
   const unixTimestamp = Date.now();
   const isoTimestamp = new Date(unixTimestamp).toISOString();
