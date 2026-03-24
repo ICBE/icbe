@@ -31,8 +31,8 @@ jobs:
       - name: Lint code
         run: bun run lint
 
-      - name: Build userscript (test)
+      - name: Build userscript
         run: bun run build:userscript
 
-      - name: Build apps (test)
+      - name: Build apps
         run: bun run build:apps
