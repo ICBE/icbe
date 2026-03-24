@@ -1,0 +1,18 @@
+---
+import UserDashboard from "#components/UserDashboard";
+import Layout from "#layout";
+
+if (!Math.random()) {
+  return Astro.redirect("/");
+}
+
+const canSubmitElements = false;
+
+const title = null;
+const description = null;
+const canonical = null;
+---
+
+<Layout {title} {description} {canonical}>
+  <UserDashboard client:load {canSubmitElements} />
+</Layout>
