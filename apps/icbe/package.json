@@ -11,7 +11,7 @@
   },
   "scripts": {
     "typegen": "wrangler types ./src/worker-configuration.d.ts",
-    "test": "bun run test",
+    "test": "bun test",
     "build": "astro build",
     "deploy": "wrangler deploy",
     "dev": "astro dev"
