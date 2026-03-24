@@ -2,13 +2,28 @@
   "name": "web-app",
   "type": "module",
   "private": true,
+  "imports": {
+    "#styles": "./src/styles/global.css",
+    "#layout": "./src/layouts/Layout.astro",
+    "#schemas": "./src/schemas/index.ts",
+    "#utils/*": "./src/utils/*.ts",
+    "#components/*": "./src/components/*.tsx"
+  },
   "scripts": {
+    "typegen": "wrangler types ./src/worker-configuration.d.ts",
+    "test": "bun test",
     "build": "astro build",
     "deploy": "wrangler deploy",
     "dev": "astro dev"
   },
   "dependencies": {
-    "astro": "catalog:"
+    "@astrojs/cloudflare": "^13.1.3",
+    "@astrojs/solid-js": "^6.0.1",
+    "@gitbeaker/rest": "^43.8.0",
+    "@tailwindcss/vite": "catalog:",
+    "astro": "catalog:",
+    "solid-js": "^1.9.11",
+    "tailwindcss": "catalog:"
   },
   "devDependencies": {
     "wrangler": "catalog:"

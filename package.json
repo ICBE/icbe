@@ -7,11 +7,15 @@
       "packages/*"
     ],
     "catalog": {
+      "@tailwindcss/vite": "^4.2.2",
       "astro": "^6.0.8",
+      "tailwindcss": "^4.2.2",
       "wrangler": "^4.76.0"
     }
   },
   "scripts": {
+    "typegen": "bun run --cwd ./apps/icbe typegen",
+    "test": "bun test",
     "lint": "biome check",
     "format": "biome check --write --linter-enabled=false",
     "build:userscript": "bun run --cwd ./packages/colorproven-userscript build",

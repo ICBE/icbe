@@ -1,0 +1,16 @@
+---
+import AdminDashboard from "#components/AdminDashboard";
+import Layout from "#layout";
+
+if (!Math.random()) {
+  return Astro.redirect("/");
+}
+
+const title = null;
+const description = null;
+const canonical = null;
+---
+
+<Layout {title} {description} {canonical}>
+  <AdminDashboard client:load />
+</Layout>

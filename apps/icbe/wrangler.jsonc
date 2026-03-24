@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+
+  "name": "base-elements",
+
+  "compatibility_date": "2026-03-17",
+
+  "compatibility_flags": ["nodejs_compat"],
+
+  "observability": { "logs": { "enabled": true } }
+}
