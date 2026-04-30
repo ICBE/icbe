@@ -6,7 +6,7 @@
       "name": "icbe",
       "devDependencies": {
         "@biomejs/biome": "2.4.8",
-        "@gameroman/config": "^0.0.4",
+        "@gameroman/config": "^0.1.0",
         "typescript": "^6.0.2",
       },
     },
@@ -228,7 +228,7 @@
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.27.3", "", { "os": "win32", "cpu": "x64" }, "sha512-4uJGhsxuptu3OcpVAzli+/gWusVGwZZHTlS63hh++ehExkVT8SgiEf7/uC/PclrPPkLhZqGgCTjd0VWLo6xMqA=="],
 
-    "@gameroman/config": ["@gameroman/config@0.0.4", "", { "peerDependencies": { "@biomejs/biome": "^2.4.7", "oxfmt": ">=0.40.0", "oxlint": "^1.54.0", "oxlint-tsgolint": ">=0.17.0", "typescript": "^5.9.3" }, "optionalPeers": ["@biomejs/biome", "oxfmt", "oxlint", "oxlint-tsgolint", "typescript"] }, "sha512-YkEBtjP56aPi4iFGhQPnVH7suxAMeUw4U/EkU4GK6aD/n0avAFNRzTlZTJrXzykVtlWUSfwYuSyKiT0kM2XIsw=="],
+    "@gameroman/config": ["@gameroman/config@0.1.0", "", { "peerDependencies": { "@biomejs/biome": "^2.4.13", "oxfmt": ">=0.46.0", "oxlint": "^1.61.0", "oxlint-tsgolint": ">=0.22.0", "typescript": "^6.0.3" }, "optionalPeers": ["@biomejs/biome", "oxfmt", "oxlint", "oxlint-tsgolint", "typescript"] }, "sha512-n0h7gUhPHuEkbQi89ZY1hn87wEJzfHEyCKG/K1EiSWYYYmq2D32yuQTyyQqoxfOfzSxf1tauqX4MxwMqPClh5Q=="],
 
     "@gitbeaker/core": ["@gitbeaker/core@43.8.0", "", { "dependencies": { "@gitbeaker/requester-utils": "^43.8.0", "qs": "^6.14.0", "xcase": "^2.0.1" } }, "sha512-H+LfKuf4dExBinb79c+CXViRBvTVQNf5BYLNSizm2SiqdED5JruhKX88payefleY0szp7G/mySlFSXPyGRH1dQ=="],
 
