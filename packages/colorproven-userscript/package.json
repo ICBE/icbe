@@ -7,7 +7,7 @@
     "deploy": "wrangler deploy"
   },
   "devDependencies": {
-    "@infinite-craft/dom-types": "^0.0.3",
+    "@infinite-craft/dom-types": "^0.0.4",
     "@violentmonkey/types": "^0.3.2",
     "usts": "^0.1.0",
     "wrangler": "catalog:"
