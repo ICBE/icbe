@@ -9,9 +9,9 @@ import { Slider } from "./ui/slider";
 // import { ThemeToggle } from "./components/theme-toggle";
 const ThemeToggle = () => null;
 
-import { getYAxisTickInterval } from "~/lib/chart-settings";
-import { history } from "~/lib/history";
-import { TIME_RANGE_PRESETS } from "~/lib/time-range-presets";
+import { getYAxisTickInterval } from "#lib/chart-settings";
+import { history } from "#lib/history";
+import { TIME_RANGE_PRESETS } from "#lib/time-range-presets";
 
 interface DataPoint {
   timestamp: number;

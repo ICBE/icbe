@@ -15,9 +15,9 @@ const colors = {
 
 const elementsMap: ElementsMap = {};
 
-async function loadData(why: "load" | "update"): Promise<ElementsData> {
+async function loadData(): Promise<ElementsData> {``
   const api_url = "https://icbe.rman.dev/api";
-  const url = `${api_url}/get-elements?why=${why}`;
+  const url = `${api_url}/get-elements`;
   const response = await fetch(url);
   const data: ElementsData = await response.json();
   return data;
@@ -115,7 +115,7 @@ function setupButtonForUpdatingData(): void {
 
     let success = false;
     try {
-      const { proven, disproven } = await loadData("update");
+      const { proven, disproven } = await loadData();
 
       storeColorData(proven, disproven);
 
@@ -149,7 +149,7 @@ function setupButtonForUpdatingData(): void {
 }
 
 async function init(): Promise<void> {
-  const { proven, disproven } = await loadData("load");
+  const { proven, disproven } = await loadData();
   storeColorData(proven, disproven);
 
   const interval = window.setInterval(() => {

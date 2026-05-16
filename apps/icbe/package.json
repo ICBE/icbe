@@ -17,12 +17,13 @@
     "dev": "astro dev"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^13.1.3",
-    "@astrojs/solid-js": "^6.0.1",
-    "@gitbeaker/rest": "^43.8.0",
+    "@astrojs/cloudflare": "13.5.1",
+    "@astrojs/solid-js": "6.0.1",
+    "@gitbeaker/rest": "43.8.0",
     "@tailwindcss/vite": "catalog:",
+    "@types/bun": "catalog:",
     "astro": "catalog:",
-    "solid-js": "^1.9.11",
+    "solid-js": "catalog:",
     "tailwindcss": "catalog:"
   },
   "devDependencies": {

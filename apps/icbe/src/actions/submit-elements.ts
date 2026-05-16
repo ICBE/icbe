@@ -6,7 +6,7 @@ import { getDisprovenToSave, getProvenToSave } from "#utils/submit-elements";
 
 const submitDisprovenElements = defineAction({
   input: z.object({ elements: z.array(z.object({ name: z.string() })) }),
-  async handler(input, context) {
+  async handler(input, _context) {
     const role = null;
 
     if (!role) {
@@ -36,7 +36,7 @@ const submitDisprovenElements = defineAction({
 
 const submitProvenElements = defineAction({
   input: z.object({ elements: DataProvenSchema }),
-  handler: async (input, context) => {
+  async handler(input, _context) {
     const role = null;
 
     if (!role) {
