@@ -1,6 +1,9 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.4.8/schema.json",
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "extends": ["@gameroman/config/biome"],
+  "files": {
+    "includes": ["**", "!**/worker-configuration.d.ts"]
+  },
   "css": { "parser": { "tailwindDirectives": true } },
   "linter": {
     "rules": {
