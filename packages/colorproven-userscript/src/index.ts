@@ -15,7 +15,7 @@ const colors = {
 
 const elementsMap: ElementsMap = {};
 
-async function loadData(): Promise<ElementsData> {``
+async function loadData(): Promise<ElementsData> {
   const api_url = "https://icbe.rman.dev/api";
   const url = `${api_url}/get-elements`;
   const response = await fetch(url);
