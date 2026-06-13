@@ -30,7 +30,7 @@
     "typescript": "6.0.3"
   },
   "overrides": {
-    "@cloudflare/vite-plugin": "1.40.0",
+    "@cloudflare/vite-plugin": "1.40.2",
     "@jridgewell/trace-mapping": "0.3.31",
     "esbuild": "0.28.0",
     "is-docker": "4.0.0",
