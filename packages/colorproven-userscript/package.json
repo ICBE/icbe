@@ -1,7 +1,7 @@
 {
   "name": "colorproven-userscript",
-  "type": "module",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "usts build",
     "deploy": "wrangler deploy"

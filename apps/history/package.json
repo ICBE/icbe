@@ -1,7 +1,7 @@
 {
   "name": "history",
-  "type": "module",
   "private": true,
+  "type": "module",
   "imports": {
     "#app": "./src/components/App.tsx",
     "#layout": "./src/layouts/Layout.astro",
