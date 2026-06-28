@@ -9,25 +9,25 @@ type SubmitState =
   | { status: "complete"; success: boolean }
   | { status: "error"; error?: string };
 
-const SubmitDisprovenElementsResultContainer = (props: {
-  state: SubmitState;
-}) => (
-  <Show when={props.state.status === "complete" && props.state} keyed>
-    {(state) => (
-      <p
-        class={`mt-4 p-4 rounded-md ${
-          state.success
-            ? "bg-green-50 dark:bg-green-950"
-            : "bg-red-50 dark:bg-red-950"
-        }`}
-      >
-        {state.success
-          ? "Elements submitted successfully!"
-          : "Elements submission failed."}
-      </p>
-    )}
-  </Show>
-);
+function SubmitDisprovenElementsResultContainer(props: { state: SubmitState }) {
+  return (
+    <Show when={props.state.status === "complete" && props.state} keyed>
+      {(state) => (
+        <p
+          class={`mt-4 p-4 rounded-md ${
+            state.success
+              ? "bg-green-50 dark:bg-green-950"
+              : "bg-red-50 dark:bg-red-950"
+          }`}
+        >
+          {state.success
+            ? "Elements submitted successfully!"
+            : "Elements submission failed."}
+        </p>
+      )}
+    </Show>
+  );
+}
 
 function SubmitDisprovenElementsSection(): JSX.Element {
   const [elementsToBeSubmitted, setElementsToBeSubmitted] = createSignal<

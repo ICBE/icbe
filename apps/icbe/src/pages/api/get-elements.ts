@@ -2,6 +2,7 @@ import type { APIRoute } from "astro";
 import { getDisprovenData, getProvenData } from "#utils/gitlab";
 import { respondWithJSON } from "#utils/respond-json";
 
+// biome-ignore lint/nursery/useReactFunctionComponentDefinition: False positive
 export const GET: APIRoute = async () => {
   const [provenData, disprovenData] = await Promise.all([
     getProvenData(),

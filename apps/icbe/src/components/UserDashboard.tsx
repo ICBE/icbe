@@ -5,13 +5,15 @@ import SubmitProvenElementsSection from "./dashboard/SubmitProvenElementsSection
 import Divider from "./ui/Divider";
 import Link from "./ui/Link";
 
-const TopBar = (): JSX.Element => (
-  <div class="flex items-center justify-between pb-4">
-    <h1 class="text-2xl font-bold text-neutral-800 dark:text-neutral-100">
-      User Dashboard
-    </h1>
-  </div>
-);
+function TopBar(): JSX.Element {
+  return (
+    <div class="flex items-center justify-between pb-4">
+      <h1 class="text-2xl font-bold text-neutral-800 dark:text-neutral-100">
+        User Dashboard
+      </h1>
+    </div>
+  );
+}
 
 export default function UserDashboard(props: {
   canSubmitElements: boolean;
