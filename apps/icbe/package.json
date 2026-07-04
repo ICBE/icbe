@@ -17,8 +17,8 @@
     "typegen": "wrangler types ./src/worker-configuration.d.ts"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "13.7.0",
-    "@astrojs/solid-js": "6.0.1",
+    "@astrojs/cloudflare": "14.1.1",
+    "@astrojs/solid-js": "7.0.1",
     "@gitbeaker/rest": "43.8.0",
     "@tailwindcss/vite": "catalog:",
     "@types/bun": "catalog:",
