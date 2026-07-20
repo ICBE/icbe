@@ -26,16 +26,17 @@ jobs:
           bun-version: latest
 
       - name: Install dependencies
-        run: bun install --frozen-lockfile
+        run: bun ci
 
-      - name: Lint code
-        run: bun run lint
+      - parallel:
+          - name: Lint code
+            run: bun run lint
 
-      - name: Run tests
-        run: bun run test
+          - name: Run tests
+            run: bun run test
 
-      - name: Build userscript
-        run: bun run build:userscript
+          - name: Build userscript
+            run: bun run build:userscript
 
-      - name: Build apps
-        run: bun run build:apps
+          - name: Build apps
+            run: bun run build:apps
