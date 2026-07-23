@@ -11,6 +11,6 @@
     "@infinite-craft/dom-types": "0.0.4",
     "@violentmonkey/types": "0.3.3",
     "usts": "0.1.1",
-    "wrangler": "4.112.0"
+    "wrangler": "4.113.0"
   }
 }
