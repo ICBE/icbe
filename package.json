@@ -21,7 +21,7 @@
     "typegen": "bun run --cwd ./apps/icbe typegen"
   },
   "overrides": {
-    "@cloudflare/vite-plugin": "1.45.1",
+    "@cloudflare/vite-plugin": "1.46.0",
     "@jridgewell/trace-mapping": "0.3.31",
     "esbuild": "0.28.1",
     "is-docker": "4.0.0",
