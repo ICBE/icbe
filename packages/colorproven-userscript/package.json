@@ -9,7 +9,7 @@
   "devDependencies": {
     "@gameroman/config": "0.2.5",
     "@infinite-craft/dom-types": "0.0.4",
-    "@violentmonkey/types": "0.3.3",
+    "@violentmonkey/types": "0.3.4",
     "usts": "0.1.1",
     "wrangler": "4.113.0"
   }
