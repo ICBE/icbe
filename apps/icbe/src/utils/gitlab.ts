@@ -1,13 +1,14 @@
 import { GITLAB_ACCESS_TOKEN, GITLAB_PROJECT_ID } from "astro:env/server";
-import { type CommitAction, Gitlab } from "@gitbeaker/rest";
+import type { CommitAction } from "@gitbeaker/rest";
+import { Gitlab } from "@gitbeaker/rest";
 import type * as z from "astro/zod";
-import {
-  type DataDisproven,
-  type DataProven,
-  type ElementsHistory,
-  type Metadata,
-  schemas,
+import type {
+  DataDisproven,
+  DataProven,
+  ElementsHistory,
+  Metadata,
 } from "#schemas";
+import { schemas } from "#schemas";
 
 const BRANCH = "main" as const;
 const BASE_DATA_DIR = "base-elements/data" as const;

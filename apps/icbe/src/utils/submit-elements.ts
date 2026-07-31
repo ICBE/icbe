@@ -5,12 +5,8 @@ import type {
   ElementsHistoryEntry,
   Metadata,
 } from "#schemas";
-import {
-  getDisprovenData,
-  getElementsHistory,
-  getProvenData,
-  type SaveToCloudData,
-} from "./gitlab";
+import type { SaveToCloudData } from "./gitlab";
+import { getDisprovenData, getElementsHistory, getProvenData } from "./gitlab";
 import { mergeProvenData } from "./merge-data";
 
 function getUpdatedMetaInfo<T extends "proven" | "disproven">(

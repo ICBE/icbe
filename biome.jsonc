@@ -4,7 +4,6 @@
   "files": {
     "includes": ["**", "!**/worker-configuration.d.ts"]
   },
-  "css": { "parser": { "tailwindDirectives": true } },
   "linter": {
     "rules": {
       "style": {
