@@ -20,13 +20,13 @@
     "@astrojs/cloudflare": "14.1.5",
     "@astrojs/solid-js": "7.0.1",
     "@gitbeaker/rest": "43.8.0",
-    "@tailwindcss/vite": "catalog:",
+    "@tailwindcss/vite": "4.3.3",
     "astro": "catalog:",
     "solid-js": "1.9.14",
-    "tailwindcss": "catalog:"
+    "tailwindcss": "4.3.3"
   },
   "devDependencies": {
     "@types/bun": "1.3.14",
-    "wrangler": "4.113.0"
+    "wrangler": "4.115.0"
   }
 }

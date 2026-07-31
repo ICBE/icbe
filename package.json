@@ -7,30 +7,27 @@
       "packages/*"
     ],
     "catalog": {
-      "@tailwindcss/vite": "4.3.3",
-      "astro": "7.0.6",
-      "tailwindcss": "4.3.3"
+      "astro": "7.0.7"
     }
   },
   "scripts": {
     "build:apps": "bun run -F './apps/*' build",
     "build:userscript": "bun run --cwd ./packages/colorproven-userscript build",
-    "format": "biome check --write --linter-enabled=false",
+    "format": "biome check --write",
     "lint": "biome check",
     "test": "bun test",
     "typegen": "bun run --cwd ./apps/icbe typegen"
   },
   "overrides": {
-    "@cloudflare/vite-plugin": "1.46.0",
+    "@cloudflare/vite-plugin": "1.48.0",
     "@jridgewell/trace-mapping": "0.3.31",
     "esbuild": "0.28.1",
-    "is-docker": "4.0.0",
     "semver": "7.8.5",
     "unstorage": "2.0.0-alpha.7"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.5",
-    "@gameroman/config": "0.2.5",
+    "@biomejs/biome": "2.5.6",
+    "@gameroman/config": "0.2.6",
     "typescript": "7.0.2"
   }
 }
