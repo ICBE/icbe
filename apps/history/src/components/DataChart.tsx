@@ -214,7 +214,7 @@ export default function Component() {
     // Ensure a minimum range for the Y-axis if min and max are the same
     if (floorMin === ceilMax) {
       floorMin = Math.max(0, floorMin - tickInterval); // Go one interval below, but not negative
-      ceilMax = ceilMax + tickInterval; // Go one interval above
+      ceilMax += tickInterval; // Go one interval above
     }
 
     const ticks = [];
