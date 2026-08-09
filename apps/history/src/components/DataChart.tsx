@@ -28,10 +28,10 @@ export default function Component() {
     .sort((a, b) => a.timestamp - b.timestamp);
 
   const minTimestamp = validData[0]?.timestamp || 0;
-  const maxTimestamp = validData[validData.length - 1]?.timestamp || 0;
+  const maxTimestamp = validData.at(-1)?.timestamp || 0;
 
   // State for time range selection, initialized to "All Time"
-  const [timeRange, setTimeRange] = useState<[number, number]>([
+  const [timeRange, setTimeRange] = useState<[min: number, max: number]>([
     minTimestamp,
     maxTimestamp,
   ]);
@@ -158,19 +158,11 @@ export default function Component() {
         ),
       });
     } else if (
-      lastPointInOrBeforeRange &&
-      lastPointInOrBeforeRange.timestamp === timeRange[1]
-    ) {
       // If the last point is exactly at the end of the range, add it (avoiding duplicates if it's also the start point)
-      if (
-        !(
-          dataPointsForChart.length > 0 &&
-          dataPointsForChart[dataPointsForChart.length - 1]!.timestamp ===
-            timeRange[1]
-        )
-      ) {
-        dataPointsForChart.push(lastPointInOrBeforeRange);
-      }
+      lastPointInOrBeforeRange?.timestamp === timeRange[1] &&
+      dataPointsForChart.at(-1)?.timestamp !== timeRange[1]
+    ) {
+      dataPointsForChart.push(lastPointInOrBeforeRange);
     }
 
     // Sort the final data points by timestamp to ensure correct line drawing
@@ -214,7 +206,7 @@ export default function Component() {
     // Ensure a minimum range for the Y-axis if min and max are the same
     if (floorMin === ceilMax) {
       floorMin = Math.max(0, floorMin - tickInterval); // Go one interval below, but not negative
-      ceilMax = ceilMax + tickInterval; // Go one interval above
+      ceilMax += tickInterval; // Go one interval above
     }
 
     const ticks = [];
