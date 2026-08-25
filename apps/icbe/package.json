@@ -17,11 +17,11 @@
     "typegen": "wrangler types ./src/worker-configuration.d.ts"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "14.1.5",
-    "@astrojs/solid-js": "7.0.1",
+    "@astrojs/cloudflare": "14.2.3",
+    "@astrojs/solid-js": "7.0.2",
     "@gitbeaker/rest": "43.8.0",
     "@tailwindcss/vite": "4.3.3",
-    "astro": "catalog:",
+    "astro": "7.2.4",
     "solid-js": "1.9.15",
     "tailwindcss": "4.3.3"
   },
