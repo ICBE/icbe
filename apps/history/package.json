@@ -33,6 +33,6 @@
   "devDependencies": {
     "@astrojs/react": "6.0.4",
     "@tailwindcss/vite": "4.3.3",
-    "wrangler": "4.127.0"
+    "wrangler": "4.127.1"
   }
 }
