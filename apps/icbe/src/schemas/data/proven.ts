@@ -22,4 +22,5 @@ type DataProvenEntry = z.infer<typeof DataProvenEntrySchema>;
 
 type DataProven = z.infer<typeof DataProvenSchema>;
 
-export { type DataProven, type DataProvenEntry, DataProvenSchema };
+export type { DataProven, DataProvenEntry };
+export { DataProvenSchema };

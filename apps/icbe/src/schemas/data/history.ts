@@ -15,8 +15,5 @@ type ElementsHistoryEntry = z.infer<typeof ElementsHistoryEntrySchema>;
 
 type ElementsHistory = z.infer<typeof ElementsHistorySchema>;
 
-export {
-  type ElementsHistory,
-  type ElementsHistoryEntry,
-  ElementsHistorySchema,
-};
+export type { ElementsHistory, ElementsHistoryEntry };
+export { ElementsHistorySchema };

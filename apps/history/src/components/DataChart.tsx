@@ -270,7 +270,7 @@ export default function Component() {
               htmlFor="proven"
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 flex items-center gap-1"
             >
-              <div className="w-3 h-3 bg-[#22c55e] rounded-sm"></div>
+              <div className="size-3 bg-[#22c55e] rounded-sm"></div>
               Proven
             </label>
           </div>
@@ -284,7 +284,7 @@ export default function Component() {
               htmlFor="disproven"
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 flex items-center gap-1"
             >
-              <div className="w-3 h-3 bg-[#ef4444] rounded-sm"></div>
+              <div className="size-3 bg-[#ef4444] rounded-sm"></div>
               Disproven
             </label>
           </div>
