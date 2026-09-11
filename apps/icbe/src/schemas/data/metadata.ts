@@ -10,4 +10,5 @@ const MetadataSchema = z
 
 type Metadata = z.infer<typeof MetadataSchema>;
 
-export { type Metadata, MetadataSchema };
+export type { Metadata };
+export { MetadataSchema };
