@@ -26,7 +26,7 @@
     "tailwindcss": "4.3.3"
   },
   "devDependencies": {
-    "@types/bun": "1.4.2",
+    "@types/bun": "1.4.3",
     "wrangler": "4.131.1"
   }
 }
