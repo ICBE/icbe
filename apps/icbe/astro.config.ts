@@ -16,7 +16,6 @@ export default defineConfig({
         context: "server",
         access: "secret",
         startsWith: "glpat",
-        length: 26,
       }),
       GITLAB_PROJECT_ID: envField.number({
         context: "server",
