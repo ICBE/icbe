@@ -21,6 +21,7 @@
     "@jridgewell/trace-mapping": "0.3.31",
     "esbuild": "0.28.2",
     "js-yaml": "npm:neoyaml@0.2.0",
+    "lightningcss": "1.33.0",
     "semver": "7.8.5",
     "sharp": "0.35.5",
     "unstorage": "2.0.0-beta.0"
