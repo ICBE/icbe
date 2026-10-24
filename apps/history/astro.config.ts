@@ -6,4 +6,5 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   integrations: [react()],
   vite: { plugins: [tailwindcss()] },
+  site: "https://history.icbe.rman.dev",
 });
