@@ -3,7 +3,7 @@ import * as z from "astro/zod";
 const ElementsHistoryEntrySchema = z
   .object({
     timestamp: z.number(),
-    "iso-timestamp": z.iso.datetime(),
+    "iso-timestamp": z.string(),
     proven: z.nullable(z.number()),
     disproven: z.nullable(z.number()),
   })
