@@ -2,13 +2,16 @@
 import "#styles";
 
 interface Props {
-  title: string | null;
-  description: string | null;
-  canonical: string | null;
+  title: string;
+  description: string;
   children: unknown;
 }
 
-const { title, description, canonical } = Astro.props;
+const canonical = Astro.site
+  ? new URL(`${Astro.url.pathname}${Astro.url.search}`, Astro.site)
+  : undefined;
+
+const { title, description } = Astro.props;
 ---
 
 <html lang="en">
@@ -30,7 +33,9 @@ const { title, description, canonical } = Astro.props;
     <link rel="canonical" href={canonical} />
   </head>
 
-  <body class="bg-neutral-50 dark:bg-neutral-800 text-black dark:text-white">
+  <body
+    class="min-h-screen flex flex-col bg-zinc-100 text-black dark:bg-zinc-900 dark:text-white"
+  >
     <slot />
   </body>
 </html>

@@ -7,7 +7,9 @@
     "#layout": "./src/layouts/Layout.astro",
     "#schemas": "./src/schemas/index.ts",
     "#utils/*": "./src/utils/*.ts",
-    "#components/*": "./src/components/*.tsx"
+    "#components/*": "./src/components/*",
+    "#icon/*": "./src/components/icons/*.tsx",
+    "#ui/*": "./src/components/ui/*"
   },
   "scripts": {
     "build": "astro build",

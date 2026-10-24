@@ -1,0 +1,15 @@
+---
+import Title from "./Title";
+
+interface Props {
+  children: unknown;
+}
+
+const isHomepage = Astro.url.pathname === "/";
+---
+
+<main class="flex flex-1 flex-col p-4">
+  <Title href={!isHomepage} />
+
+  <slot />
+</main>

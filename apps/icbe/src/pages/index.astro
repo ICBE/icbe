@@ -1,22 +1,29 @@
 ---
-export const prerender = true;
-
+import PageShell from "#components/PageShell.astro";
+import IconLink from "#components/ui/IconLink.astro";
+import TextLink from "#components/ui/TextLink.astro";
+import IconDiscord from "#icon/Discord";
+import IconGitHub from "#icon/GitHub";
 import Layout from "#layout";
 
-const title = null;
-const description = null;
-const canonical = null;
+const title = "Infinite Craft Base Elements";
+const description = "Infinite Craft Base Elements";
+
+export const prerender = true;
 ---
 
-<Layout {title} {description} {canonical}>
-  <div class="min-h-screen flex flex-col">
-    <div class="flex items-center justify-between p-4">
-      <h1 class="text-2xl font-bold text-neutral-800 dark:text-neutral-200">
-        Infinite Craft Base Elements
-      </h1>
+<Layout {title} {description}>
+  <PageShell>
+    <div
+      class="flex flex-1 flex-col justify-center gap-4 w-full max-w-sm mx-auto"
+    >
+      <div class="flex items-center justify-between p-2">
+        <IconLink icon={<IconDiscord />} href="/discord" external />
+        <IconLink icon={<IconGitHub />} href="/github" external />
+      </div>
+
+      <TextLink label="Userscript" href="/userscript" external />
+      <TextLink label="History" href="/history" external />
     </div>
-    <div class="flex-1 flex items-center justify-center">
-      <p class="text-neutral-800 dark:text-neutral-200">Welcome</p>
-    </div>
-  </div>
+  </PageShell>
 </Layout>

@@ -30,7 +30,7 @@ jobs:
 
       - parallel:
           - name: Lint code
-            run: bun run lint
+            run: bun run lint --diagnostic-level=error
 
           - name: Run tests
             run: bun run test

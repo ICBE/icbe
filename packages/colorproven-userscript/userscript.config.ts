@@ -14,5 +14,7 @@ export default defineConfig({
     homepageURL: "https://rman.dev/discord",
     supportURL: "https://rman.dev/discord",
     match: "https://neal.fun/infinite-craft/",
+    downloadURL: "https://icbe.rman.dev/userscript/install",
+    updateURL: "https://icbe.rman.dev/userscript/install",
   },
 });
