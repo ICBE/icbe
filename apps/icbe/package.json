@@ -21,7 +21,7 @@
   "dependencies": {
     "@astrojs/cloudflare": "14.3.1",
     "@astrojs/solid-js": "7.0.2",
-    "@gitbeaker/rest": "43.8.0",
+    "@gitbeaker/rest": "44.0.5",
     "@tailwindcss/vite": "4.3.3",
     "astro": "7.3.3",
     "solid-js": "1.9.18",
